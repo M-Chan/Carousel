@@ -3,9 +3,23 @@
 	margin: 0;
 }
 
-.carouselContainer {
+body {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.carouselContainer {
+    overflow: hidden;
+    max-width: 1000px;
+}
+
+.slide--hidden {
+    display: none;
+}
+
+.slide--visible {
+    display: block;
 }
 
 #chipmunk {
@@ -39,4 +53,38 @@
 
     width: 1000px;
     height: 600px;
+}
+
+button{
+    border-radius: 50px;
+    border: 0;
+
+    width: 60px;
+    height: 60px;
+
+    cursor: pointer;
+
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 2;
+}
+
+#prev {
+    position: absolute;
+    transform: translateX(-50%);
+    margin-left: 30px;
+    transform: translateY(-50%);
+    margin-top: -300px;
+
+    display: inline-block;
+}
+
+#next {
+    position: absolute;
+    transform: translateX(-50%);
+    margin-left: 915px;
+    transform: translateY(-50%);
+    margin-top: -300px;
+
+    display: inline-block;
 }
