@@ -1,6 +1,6 @@
 *{
 	padding: 0;
-	margin: 0;
+	margin-top: 0;
 }
 
 body {
@@ -10,8 +10,16 @@ body {
 }
 
 .carouselContainer {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
     overflow: hidden;
     max-width: 1000px;
+    margin-bottom: 0;
+
+    border-radius: 50px;
+    border: 5px solid rgb(0, 0, 0);
+    box-shadow: 10px 10px 25px 15px rgb(134, 153, 194);
 }
 
 .slide--hidden {
@@ -74,24 +82,25 @@ button{
 
 button:hover{
     background: rgba(128, 209, 205, 0.8);
+    border: 3px solid rgb(0, 0, 0);
 }
 
-#prev {
+#prevButton {
     position: absolute;
     transform: translateX(-50%);
-    margin-left: 30px;
+    left: 30px;
     transform: translateY(-50%);
-    margin-top: -300px;
+    top: 50%;
 
     display: inline-block;
 }
 
-#next {
+#nextButton {
     position: absolute;
     transform: translateX(-50%);
-    margin-left: 915px;
+    right: 30px;
     transform: translateY(-50%);
-    margin-top: -300px;
+    top: 50%;
 
     display: inline-block;
 }
