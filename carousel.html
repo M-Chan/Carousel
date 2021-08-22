@@ -3,6 +3,7 @@
     <head>
         <title>Carousel</title>
         <link rel="stylesheet" type="text/css" href="carouselStyles.css">
+        <script async type="text/javascript" src="carouselScript.js"></script>
     </head>
 
 <body>
@@ -11,50 +12,8 @@
         <div id="fox" class="slide slide--hidden"></div>
         <div id="tigerCub" class="slide slide--hidden"></div>
 
-
-        <div id="prevButton">
-            <button type="button" onclick="prev()">&#x2039</button>
-        </div>
-
-        <div id="nextButton">
-            <button type="button" onclick="next()">&#x203A</button>
-        </div>
+        <button type="button" id="prevButton" onclick="prev()">&#x2039</button>
+        <button type="button" id="nextButton" onclick="next()">&#x203A</button>
+    </div>
 </body>
-
-
-<script>
-    let slidePosition = 0;
-
-    const slides = document.getElementsByClassName("slide");
-    const totalSlides = slides.length;
-
-
-    function prev() {
-        if(slidePosition === 0) {
-            slidePosition = (totalSlides - 1); //go back to the last slide of the carousel if at the beginning
-        }
-        else slidePosition--; //move back by one slide
-
-        updateSlides();
-    };
-    
-    function next() {
-        if(slidePosition === (totalSlides - 1)) {
-            slidePosition = 0; //go back to the beginning of the carousel if reached the end
-        }
-        else slidePosition++; //move along by one slide
-
-        updateSlides()
-    };
-
-    function updateSlides() {
-        //below hides all slides
-        for (let slide of slides) {
-            slide.classList.remove("slide--visible");
-            slide.classList.add("slide--hidden");
-        }
-        slides[slidePosition].classList.add("slide--visible"); //show current slide
-    };
-</script>
-
 </html>
